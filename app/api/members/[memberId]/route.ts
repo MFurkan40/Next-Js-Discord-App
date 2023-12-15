@@ -68,11 +68,11 @@ export async function PATCH(
     const { searchParams } = new URL(req.url);
     const { role } = await req.json();
 
+    const serverId = searchParams.get("serverId");
+
     if (!profile) {
       return new NextResponse("Unauthorized", { status: 401 });
     }
-
-    const serverId = searchParams.get("serverId");
 
     if (!serverId) {
       return new NextResponse("Server ID Missing", { status: 400 });

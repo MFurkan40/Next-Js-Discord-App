@@ -8,12 +8,12 @@ import { ActionTooltip } from "@/components/action-tooltip";
 import { useModal } from "@/hooks/use-modal-store";
 
 interface ServerSectionProps {
-  label?: string;
+  label: string;
   role?: MemberRole;
-  sectionType?: "channels" | "members";
+  sectionType: "channels" | "members";
   channelType?: ChannelType;
   server?: ServerWithMembersWithProfiles;
-}
+};
 
 export const ServerSection = ({
   label,
@@ -50,5 +50,5 @@ export const ServerSection = ({
         </ActionTooltip>
       )}
     </div>
-  );
-};
+  )
+}
