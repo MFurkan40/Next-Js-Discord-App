@@ -42,6 +42,7 @@ const ChannelIdPage = async ({ params }: ChannelIdPageProps) => {
 
   const generalChannel = await db.channel.findFirst({
     where: {
+      serverId: params.serverId,
       name: "general",
     },
   });

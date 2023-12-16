@@ -56,6 +56,7 @@ const MemberIdPage = async ({ params, searchParams }: MemberIdPageProps) => {
 
   const generalChannel = await db.channel.findFirst({
     where: {
+      serverId: params.serverId,
       name: "general",
     },
   });

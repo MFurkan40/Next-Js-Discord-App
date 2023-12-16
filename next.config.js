@@ -8,7 +8,6 @@ const nextConfig = {
 
     return config;
   },
-  swcMinify: false,
   images: {
     domains: ["uploadthing.com", "utfs.io"],
   },
